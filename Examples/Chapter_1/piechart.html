@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pie Chart Example</title>
+</head>
+
+<body>
+
+  <div id="chart" style="width:600px;height:300px;margin-bottom: 50px"></div>
+
+  <script src="../../flotr2.min.js"></script>
+  <script>
+    
+    var data = [
+      {data: [[0,22.4]], label: "Extreme Poverty"},
+      {data: [[1,77.6]]}
+    ]
+
+    window.onload = function () {
+      Flotr.draw(document.getElementById('chart'),data,{
+        title: "How much of the World Lives on $1.25/Day?",
+        pie: {
+          show: true
+        },
+        yaxis: {
+          showlabels:false
+        },
+        xaxis: {
+          showlabels:false
+        },
+        grid: {
+          horizontalLines: false,
+          verticalLines: false
+        }
+      })
+    }
+
+
+  </script>
+
+</body>
+
+</html>
